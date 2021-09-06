@@ -4,6 +4,7 @@ import Task from './Task'
 
 const TaskList = ( {task, del} ) => {
 
+
     let tasks = task.map(( {text, k, important } ) => {
         return (
         <Task 

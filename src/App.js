@@ -5,7 +5,7 @@ import TaskList from './components/TaskList'
 
 const App = () => {
 
-  let [ important, setImportant ] = useState(false);
+  const [ important, setImportant ] = useState(false);
   let [ value, setValue ] = useState('') 
   let [ task, setTask] = useState([]);
 
@@ -13,7 +13,7 @@ const App = () => {
     setValue(e.target.value)
   }
 
-  const handleAddButton = () => {
+  const handleAddButton = () => { 
     if (value !== '') {
       const newTasks = [...task, {text: value, k: task.length, important: important}]
       setTask(newTasks)
@@ -24,9 +24,7 @@ const App = () => {
   }
 
   const handleCheckBox = () => {
-    setImportant(
-      important = !important
-    )
+    setImportant( !important )
   }
 
   const handleDeleteButton = (k) => {

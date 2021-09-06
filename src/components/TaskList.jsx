@@ -9,6 +9,7 @@ const TaskList = ( {task, del} ) => {
         <Task 
             text={text} 
             k={k} 
+            key = { Math.round( Math.random() * 10000000000 ) }
             important={important} 
             del={del} />
     )})

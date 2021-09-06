@@ -9,7 +9,7 @@ const Task = ( {text, del, k, important} ) => {
                 k={k}>
                 {text}
             </p>  
-            <button onClick={()=> del(k) }>Delete</button>
+            <button onClick={ ()=> del(k) }>Delete</button>
         </>
     )
 }

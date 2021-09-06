@@ -15,7 +15,7 @@ const App = () => {
 
   const handleAddButton = () => {
     if (value !== '') {
-      const newTasks = [...task, {text: value, key: task.length, important: important}]
+      const newTasks = [...task, {text: value, k: task.length, important: important}]
       setTask(newTasks)
       setValue('')
   } else {
@@ -29,10 +29,10 @@ const App = () => {
     )
   }
 
-  const handleDeleteButton = (key) => {
+  const handleDeleteButton = (k) => {
     console.log('seks')
     let tasks = [...task]
-    const NewTaks = tasks = tasks.filter(task => key !== task.key)
+    const NewTaks = tasks.filter(task => k !== task.k)
     setTask(NewTaks)
   }
 

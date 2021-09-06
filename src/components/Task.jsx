@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Task = ( {text, del, key, important} ) => {
-
+const Task = ( {text, del, k, important} ) => {
+    
     return (
         <>
             <p 
                 style={important ? {color: "red"} : null} 
-                key={key}>
+                k={k}>
                 {text}
             </p>  
-            <button onClick={del}>Delete</button>
+            <button onClick={()=> del(k) }>Delete</button>
         </>
     )
 }

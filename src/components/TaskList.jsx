@@ -4,11 +4,11 @@ import Task from './Task'
 
 const TaskList = ( {task, del} ) => {
 
-    let tasks = task.map(( {text, key, important } ) => {
+    let tasks = task.map(( {text, k, important } ) => {
         return (
         <Task 
             text={text} 
-            key={key} 
+            k={k} 
             important={important} 
             del={del} />
     )})
